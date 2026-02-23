@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { ChevronLeft, ChevronRight, Heart, Minus, Plus, ShoppingCart } from "lucide-react"
+import { ChevronLeft, ChevronRight, Heart, ShoppingCart } from "lucide-react"
 import Image from "next/image"
 
 export interface Product {
@@ -15,7 +15,6 @@ export interface Product {
   badge?: string
   badgeColor?: string
   promoBadge?: string
-  unavailable?: boolean
   preVenda?: boolean
 }
 
@@ -25,7 +24,6 @@ interface ProductCarouselProps {
 }
 
 function ProductCard({ product }: { product: Product }) {
-  const [qty, setQty] = useState(1)
   const [liked, setLiked] = useState(false)
 
   return (
@@ -87,36 +85,11 @@ function ProductCard({ product }: { product: Product }) {
           </div>
         </div>
 
-        {/* Quantity and Cart */}
-        {!product.unavailable ? (
-          <>
-            <div className="flex items-center justify-end gap-3 mb-3">
-              <button
-                onClick={() => setQty(Math.max(1, qty - 1))}
-                className="w-7 h-7 flex items-center justify-center text-[#5c3a21] hover:bg-[#f0ebe3] rounded transition-colors"
-                aria-label="Diminuir quantidade"
-              >
-                <Minus className="h-4 w-4" />
-              </button>
-              <span className="text-sm font-semibold text-[#1a1a1a] min-w-[1.5rem] text-center">{qty}</span>
-              <button
-                onClick={() => setQty(qty + 1)}
-                className="w-7 h-7 flex items-center justify-center text-[#5c3a21] hover:bg-[#f0ebe3] rounded transition-colors"
-                aria-label="Aumentar quantidade"
-              >
-                <Plus className="h-4 w-4" />
-              </button>
-            </div>
-            <button className="w-full bg-[#4a8c3f] hover:bg-[#3d7534] text-white text-sm font-semibold py-3 rounded-md flex items-center justify-center gap-2 transition-colors mt-auto">
-              ADICIONAR AO CARRINHO
-              <ShoppingCart className="h-4 w-4" />
-            </button>
-          </>
-        ) : (
-          <button className="w-full bg-[#e8e0d6] text-[#999] text-sm font-semibold py-3 rounded-md mt-auto cursor-not-allowed">
-            PRODUTO INDISPONIVEL
-          </button>
-        )}
+        {/* Buy button */}
+        <button className="w-full bg-[#4a8c3f] hover:bg-[#3d7534] text-white text-sm font-semibold py-3 rounded-md flex items-center justify-center gap-2 transition-colors mt-auto">
+          COMPRE AGORA
+          <ShoppingCart className="h-4 w-4" />
+        </button>
       </div>
     </div>
   )

@@ -10,6 +10,26 @@ import type { Product } from "@/components/product-carousel"
 const easterProducts: Product[] = [
   {
     id: 1,
+    name: "Ovo de Pascoa ao Leite Chaveiro Luffy One Piece 170g",
+    image: "/images/egg-luffy.jpg",
+    originalPrice: "R$ 74,99",
+    currentPrice: "69,99",
+    unit: "un",
+    cacaus: 3,
+    badgeColor: "#4a8c3f",
+  },
+  {
+    id: 2,
+    name: "Ovo de Pascoa Estojo Scooby-Doo 170g",
+    image: "/images/egg-scooby.jpg",
+    originalPrice: "R$ 119,99",
+    currentPrice: "109,99",
+    unit: "un",
+    cacaus: 5,
+    badgeColor: "#4a8c3f",
+  },
+  {
+    id: 3,
     name: "Ovo de Pascoa ao Leite Pelucia Snoopy Astronauta 170g",
     image: "/images/egg-snoopy.jpg",
     originalPrice: "R$ 129,99",
@@ -19,7 +39,7 @@ const easterProducts: Product[] = [
     badgeColor: "#4a8c3f",
   },
   {
-    id: 2,
+    id: 4,
     name: "Ovo de Pascoa ao Leite Pelucia Animadinha com LED Ursinhos...",
     image: "/images/egg-animadinha.jpg",
     originalPrice: "R$ 139,99",
@@ -29,7 +49,7 @@ const easterProducts: Product[] = [
     badgeColor: "#4a8c3f",
   },
   {
-    id: 3,
+    id: 5,
     name: "Ovo de Pascoa ao Leite Pelucia Zangadinho com LED Ursinhos...",
     image: "/images/egg-zangadinho.jpg",
     originalPrice: "R$ 139,99",
@@ -39,7 +59,7 @@ const easterProducts: Product[] = [
     badgeColor: "#4a8c3f",
   },
   {
-    id: 4,
+    id: 6,
     name: "Ovo de Pascoa ao Leite Pelucia Batman 170g",
     image: "/images/egg-batman.jpg",
     originalPrice: "R$ 84,99",
@@ -62,7 +82,6 @@ const cremeProducts: Product[] = [
     cacaus: 0,
     badgeColor: "#4a8c3f",
     promoBadge: "O Segundo sai por R$10",
-    unavailable: true,
   },
   {
     id: 6,
