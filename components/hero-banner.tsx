@@ -6,12 +6,12 @@ import Image from "next/image"
 
 const banners = [
   {
-    image: "/images/hero-pascoa.jpg",
+    image: "/images/banner-pascoa.webp",
     alt: "Pascoa Cacau Show - A maior Pascoa do Brasil",
   },
   {
-    image: "/images/hero-pascoa.jpg",
-    alt: "Pascoa Cacau Show - Aproveite",
+    image: "/images/banner-lacreme.webp",
+    alt: "laCreme - Oferta para voce se derreter. Na compra de 2 tabletes laCreme de 100g, o segundo sai por R$10",
   },
 ]
 
